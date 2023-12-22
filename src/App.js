@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import CardList from "./CardList";
 import SearchBar from "./SearchBar";
+import Scroll from "./Scroll.js";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       Robots: [], 
-      searchField: ''
+      searchField: ' '
     }
   }
 
@@ -29,7 +30,9 @@ class App extends Component {
       <div className="tc">
         <h1 className=" f1 fw6 lh-solid">Robo Friends</h1>
         <SearchBar searching={this.onChangeSearch}/>
+        <Scroll>
         <CardList Robots={filteredRobots}/>
+        </Scroll>
       </div>
     );
   }
