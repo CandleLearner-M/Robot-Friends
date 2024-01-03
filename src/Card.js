@@ -3,7 +3,7 @@ import React from "react";
 
 const Card = (props) => {
   const {id} = props;
-  const {name} = props;
+  const name = props.name;
   const {email} = props;
   return (
     <div className="bg-light-purple dib br3 pa3 ma3 grow bw2  shadow-5 pointer">
